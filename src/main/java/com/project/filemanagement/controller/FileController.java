@@ -39,7 +39,7 @@ public class FileController {
 		}
 	}
 
-	@GetMapping
+	@GetMapping("/listFiles")
 	public ResponseEntity<List<FileModel>> listFiles() {
 		List<FileModel> files = fileService.listFiles();
 		return ResponseEntity.ok(files);
