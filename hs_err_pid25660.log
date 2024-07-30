@@ -1,0 +1,262 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_IN_PAGE_ERROR (0xc0000006) at pc=0x00007ffc45d81989, pid=25660, tid=32476
+#
+# JRE version:  (21.0.1+12) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0.1+12-LTS-29, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [VCRUNTIME140.dll+0x1989]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:+ShowCodeDetailsInExceptionMessages -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:14515 -javaagent:F:\sts-4.21.0.RELEASE\configuration\org.eclipse.osgi\258\0\.cp\lib\javaagent-shaded.jar -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 com.project.filemanagement.FileManagementApplication
+
+Host: Intel(R) Core(TM) i7-4720HQ CPU @ 2.60GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+Time: Mon Jul 29 15:26:20 2024 Türkiye Standart Saati elapsed time: 0.072546 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+Stack: [0x000000d26d200000,0x000000d26d300000],  sp=0x000000d26d2ff180,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [VCRUNTIME140.dll+0x1989]
+V  [jvm.dll+0x6ecd25]
+V  [jvm.dll+0x6eba15]
+V  [jvm.dll+0x6eb591]
+V  [jvm.dll+0x3bb5b2]
+V  [jvm.dll+0x8059e5]
+V  [jvm.dll+0x44effe]
+V  [jvm.dll+0x450901]
+C  [jli.dll+0x52a3]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17344]
+C  [ntdll.dll+0x4cc91]
+
+
+siginfo: EXCEPTION_IN_PAGE_ERROR (0xc0000006), writing address 0x00000212d8ed0000
+
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00000212d8ed0000, RCX=0x0000000000010000, RDX=0x0000000000000000
+RSP=0x000000d26d2ff180, RBP=0x00000212d8d0ab70, RSI=0x00000212d8ce79a0, RDI=0x00000212d8ed0000
+R8 =0x0000000000010000, R9 =0x00000212d8ed0000, R10=0x00007ffc45d80000, R11=0x0000000000000000
+R12=0x00007ffbee3652f0, R13=0x00000212d8ce76a0, R14=0x00000212d8cef880, R15=0x0000000000010000
+RIP=0x00007ffc45d81989, EFLAGS=0x0000000000010202
+
+
+Top of Stack: (sp=0x000000d26d2ff180)
+0x000000d26d2ff180:   0000000000000000 00007ffbee3ccd25
+0x000000d26d2ff190:   00000212d8d0ab70 0000021200000000
+0x000000d26d2ff1a0:   00000212d8ce79a0 000000000000015c
+0x000000d26d2ff1b0:   0000000000010000 000000d26d2ff1d0
+0x000000d26d2ff1c0:   000000d26d2ff450 0000000000000104
+0x000000d26d2ff1d0:   0000000000000103 00000212d8d0ab75
+0x000000d26d2ff1e0:   0000000000000101 0000000000000004
+0x000000d26d2ff1f0:   00000212d8cd0000 000000d26d2ff2b9
+0x000000d26d2ff200:   0000000000000002 00007ffc4d19b3c7
+0x000000d26d2ff210:   00000212d8c40000 0000021200000000
+0x000000d26d2ff220:   0000000000000014 00007ffc00000000
+0x000000d26d2ff230:   00000212005c3a43 00007ffc00000002
+0x000000d26d2ff240:   0000000200000080 0000000000000000
+0x000000d26d2ff250:   00000212d8cd0378 000000d26d2ff264
+0x000000d26d2ff260:   0000000300000004 0000000000000000
+0x000000d26d2ff270:   dc0773d700000000 00007ffc4d17a36f
+0x000000d26d2ff280:   0000000000000000 0000000000000000
+0x000000d26d2ff290:   00000000001b001c 000000000000004d
+0x000000d26d2ff2a0:   00000212daf20530 00007ffc4d190b31
+0x000000d26d2ff2b0:   0000000000000002 00007ffc4d19b86b
+0x000000d26d2ff2c0:   0000000000000000 00000212d8c40fc0
+0x000000d26d2ff2d0:   0000000000130003 00000212d8c40000
+0x000000d26d2ff2e0:   000000d26d2ffa48 000000d26d2ff958
+0x000000d26d2ff2f0:   00000212d8ce76a0 00007ffbee3652f0
+0x000000d26d2ff300:   0000000000000013 0000000000000009
+0x000000d26d2ff310:   000000d26d2ff3c0 00007ffc4adffde6
+0x000000d26d2ff320:   0000000000000000 0000000000000014
+0x000000d26d2ff330:   000000d26d2ff3f0 00007ffc4adf0000
+0x000000d26d2ff340:   0000000000000013 00007ffbee39b0c1
+0x000000d26d2ff350:   0000000000000014 0000000000000000
+0x000000d26d2ff360:   0000000000000000 00007ffbee39b0c1
+0x000000d26d2ff370:   0000000000000009 00007ffbee39d1ba 
+
+Instructions: (pc=0x00007ffc45d81989)
+0x00007ffc45d81889:   49 03 c8 0f 10 44 11 f0 48 83 e9 10 49 83 e8 10
+0x00007ffc45d81899:   f6 c1 0f 74 17 48 8b c1 48 83 e1 f0 0f 10 c8 0f
+0x00007ffc45d818a9:   10 04 11 0f 11 08 4c 8b c1 4d 2b c3 4d 8b c8 49
+0x00007ffc45d818b9:   c1 e9 07 74 6f 0f 29 01 eb 14 66 66 66 66 66 0f
+0x00007ffc45d818c9:   1f 84 00 00 00 00 00 0f 29 41 10 0f 29 09 0f 10
+0x00007ffc45d818d9:   44 11 f0 0f 10 4c 11 e0 48 81 e9 80 00 00 00 0f
+0x00007ffc45d818e9:   29 41 70 0f 29 49 60 0f 10 44 11 50 0f 10 4c 11
+0x00007ffc45d818f9:   40 49 ff c9 0f 29 41 50 0f 29 49 40 0f 10 44 11
+0x00007ffc45d81909:   30 0f 10 4c 11 20 0f 29 41 30 0f 29 49 20 0f 10
+0x00007ffc45d81919:   44 11 10 0f 10 0c 11 75 ae 0f 29 41 10 49 83 e0
+0x00007ffc45d81929:   7f 0f 28 c1 4d 8b c8 49 c1 e9 04 74 1a 66 66 0f
+0x00007ffc45d81939:   1f 84 00 00 00 00 00 0f 11 01 48 83 e9 10 0f 10
+0x00007ffc45d81949:   04 11 49 ff c9 75 f0 49 83 e0 0f 74 08 41 0f 10
+0x00007ffc45d81959:   0a 41 0f 11 0b 0f 11 01 49 8b c3 c3 cc cc cc cc
+0x00007ffc45d81969:   cc cc cc cc cc cc cc cc cc cc cc cc cc 66 66 0f
+0x00007ffc45d81979:   1f 84 00 00 00 00 00 57 8b c2 48 8b f9 49 8b c8
+0x00007ffc45d81989:   f3 aa 49 8b c1 5f c3 cc cc cc cc cc cc 66 66 0f
+0x00007ffc45d81999:   1f 84 00 00 00 00 00 48 8b c1 4c 8b c9 4c 8d 15
+0x00007ffc45d819a9:   53 e6 ff ff 0f b6 d2 49 bb 01 01 01 01 01 01 01
+0x00007ffc45d819b9:   01 4c 0f af da 66 49 0f 6e c3 49 83 f8 0f 0f 87
+0x00007ffc45d819c9:   83 00 00 00 0f 1f 00 49 03 c8 47 8b 8c 82 b0 80
+0x00007ffc45d819d9:   01 00 4d 03 ca 41 ff e1 4c 89 59 f1 44 89 59 f9
+0x00007ffc45d819e9:   66 44 89 59 fd 44 88 59 ff c3 4c 89 59 f2 44 89
+0x00007ffc45d819f9:   59 fa 66 44 89 59 fe c3 66 66 66 66 66 66 66 0f
+0x00007ffc45d81a09:   1f 84 00 00 00 00 00 4c 89 59 f3 44 89 59 fb 44
+0x00007ffc45d81a19:   88 59 ff c3 0f 1f 00 4c 89 59 f4 44 89 59 fc c3
+0x00007ffc45d81a29:   4c 89 59 f5 66 44 89 59 fd 44 88 59 ff c3 4c 89
+0x00007ffc45d81a39:   59 f7 44 88 59 ff c3 4c 89 59 f6 66 44 89 59 fe
+0x00007ffc45d81a49:   c3 4c 89 59 f8 c3 90 66 0f 6c c0 49 83 f8 20 77
+0x00007ffc45d81a59:   0c f3 0f 7f 01 f3 42 0f 7f 44 01 f0 c3 83 3d ab
+0x00007ffc45d81a69:   45 01 00 03 0f 82 dd 01 00 00 4c 3b 05 a6 45 01
+0x00007ffc45d81a79:   00 76 16 4c 3b 05 a5 45 01 00 77 0d f6 05 30 49 
+
+
+
+---------------  P R O C E S S  ---------------
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Not initialized>
+
+Dll operation events (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff61d7d0000 - 0x00007ff61d7e0000 	C:\Program Files\Java\jdk-21\bin\javaw.exe
+0x00007ffc4d170000 - 0x00007ffc4d368000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffc4bb20000 - 0x00007ffc4bbdd000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffc4a9d0000 - 0x00007ffc4acc6000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffc4adf0000 - 0x00007ffc4aef0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffc45d80000 - 0x00007ffc45d9b000 	C:\Program Files\Java\jdk-21\bin\VCRUNTIME140.dll
+0x00007ffc44b70000 - 0x00007ffc44b89000 	C:\Program Files\Java\jdk-21\bin\jli.dll
+0x00007ffc4d080000 - 0x00007ffc4d130000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffc4cba0000 - 0x00007ffc4cc3e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffc4cc40000 - 0x00007ffc4cce0000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffc4b640000 - 0x00007ffc4b763000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffc4a830000 - 0x00007ffc4a857000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffc4b770000 - 0x00007ffc4b90f000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffc4aef0000 - 0x00007ffc4af12000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffc4cb70000 - 0x00007ffc4cb9b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffc36f30000 - 0x00007ffc371ca000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_60b8b9eb71f62e16\COMCTL32.dll
+0x00007ffc4a8b0000 - 0x00007ffc4a9c7000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffc4afb0000 - 0x00007ffc4b04d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffc3f550000 - 0x00007ffc3f55a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffc4be50000 - 0x00007ffc4be7f000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffc45d70000 - 0x00007ffc45d7c000 	C:\Program Files\Java\jdk-21\bin\vcruntime140_1.dll
+0x00007ffc3c1c0000 - 0x00007ffc3c24e000 	C:\Program Files\Java\jdk-21\bin\msvcp140.dll
+0x00007ffbedce0000 - 0x00007ffbee9f5000 	C:\Program Files\Java\jdk-21\bin\server\jvm.dll
+0x00007ffc4d010000 - 0x00007ffc4d07b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffc4a120000 - 0x00007ffc4a16b000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ffc386f0000 - 0x00007ffc38717000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffc4a100000 - 0x00007ffc4a112000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ffc49000000 - 0x00007ffc49012000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffc44b60000 - 0x00007ffc44b6a000 	C:\Program Files\Java\jdk-21\bin\jimage.dll
+0x00007ffc37d10000 - 0x00007ffc37ef4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffc30180000 - 0x00007ffc301b4000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffc4af20000 - 0x00007ffc4afa2000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffc446c0000 - 0x00007ffc446fc000 	C:\Program Files\Java\jdk-21\bin\jdwp.dll
+0x00007ffc44b50000 - 0x00007ffc44b5f000 	C:\Program Files\Java\jdk-21\bin\instrument.dll
+0x00007ffc445c0000 - 0x00007ffc445df000 	C:\Program Files\Java\jdk-21\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_60b8b9eb71f62e16;C:\Program Files\Java\jdk-21\bin\server
+
+VM Arguments:
+jvm_args: -XX:+ShowCodeDetailsInExceptionMessages -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:14515 -javaagent:F:\sts-4.21.0.RELEASE\configuration\org.eclipse.osgi\258\0\.cp\lib\javaagent-shaded.jar -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 
+java_command: com.project.filemanagement.FileManagementApplication
+java_class_path (initial): E:\Visual Studio Code Projects\filemanagement\target\classes;C:\Users\SAMET\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.2.1.RELEASE\spring-boot-starter-data-jpa-2.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.2.1.RELEASE\spring-boot-starter-aop-2.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\aspectj\aspectjweaver\1.9.4\aspectjweaver-1.9.4.jar;C:\Users\SAMET\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.2.1.RELEASE\spring-boot-starter-jdbc-2.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\com\zaxxer\HikariCP\3.4.1\HikariCP-3.4.1.jar;C:\Users\SAMET\.m2\repository\org\springframework\spring-jdbc\5.2.1.RELEASE\spring-jdbc-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;C:\Users\SAMET\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\SAMET\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\SAMET\.m2\repository\org\hibernate\hibernate-core\5.4.8.Final\hibernate-core-5.4.8.Final.jar;C:\Users\SAMET\.m2\repository\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;C:\Users\SAMET\.m2\repository\org\javassist\javassist\3.24.0-GA\javassist-3.24.0-GA.jar;C:\Users\SAMET\.m2\repository\net\bytebuddy\byte-buddy\1.10.2\byte-buddy-1.10.2.jar;C:\Users\SAMET\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\SAMET\.m2\repository\org\jboss\jandex\2.0.5.Final\jandex-2.0.5.Final.jar;C:\Users\SAMET\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\SAMET\.m2\repository\org\dom4j\dom4j\2.1.1\dom4j-2.1.1.jar;C:\Users\SAMET\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.0.Final\hibernate-commons-annotations-5.1.0.Final.jar;C:\Users\SAMET\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar;C:\Users\SAMET\.m2\repository\org\glassfish\jaxb\txw2\2.3.2\txw2-2.3.2.jar;C:\Users\SAMET\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.8\istack-commons-runtime-3.0.8.jar;C:\Users\SAMET\.m2\repository\org\jvnet\staxex\stax-ex\1.8.1\stax-ex-1.8.1.jar;C:\Users\SAMET\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.16\FastInfoset-1.2.16.jar;C:\Users\SAMET\.m2\repository\org\springframework\data\spring-data-jpa\2.2.1.RELEASE\spring-data-jpa-2.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\data\spring-data-commons\2.2.1.RELEASE\spring-data-commons-2.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\spring-orm\5.2.1.RELEASE\spring-orm-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\spring-context\5.2.1.RELEASE\spring-context-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\spring-tx\5.2.1.RELEASE\spring-tx-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\spring-beans\5.2.1.RELEASE\spring-beans-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\slf4j\slf4j-api\1.7.29\slf4j-api-1.7.29.jar;C:\Users\SAMET\.m2\repository\org\springframework\spring-aspects\5.2.1.RELEASE\spring-aspects-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.2.1.RELEASE\spring-boot-starter-web-2.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\boot\spring-boot-starter\2.2.1.RELEASE\spring-boot-starter-2.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\boot\spring-boot\2.2.1.RELEASE\spring-boot-2.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.2.1.RELEASE\spring-boot-autoconfigure-2.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.2.1.RELEASE\spring-boot-starter-logging-2.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\SAMET\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\SAMET\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.12.1\log4j-to-slf4j-2.12.1.jar;C:\Users\SAMET\.m2\repository\org\apache\logging\log4j\log4j-api\2.12.1\log4j-api-2.12.1.jar;C:\Users\SAMET\.m2\repository\org\slf4j\jul-to-slf4j\1.7.29\jul-to-slf4j-1.7.29.jar;C:\Users\SAMET\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\SAMET\.m2\repository\org\yaml\snakeyaml\1.25\snakeyaml-1.25.jar;C:\Users\SAMET\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.2.1.RELEASE\spring-boot-starter-json-2.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.10.0\jackson-datatype-jdk8-2.10.0.jar;C:\Users\SAMET\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.10.0\jackson-datatype-jsr310-2.10.0.jar;C:\Users\SAMET\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.10.0\jackson-module-parameter-names-2.10.0.jar;C:\Users\SAMET\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.2.1.RELEASE\spring-boot-starter-tomcat-2.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.27\tomcat-embed-core-9.0.27.jar;C:\Users\SAMET\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.27\tomcat-embed-el-9.0.27.jar;C:\Users\SAMET\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.27\tomcat-embed-websocket-9.0.27.jar;C:\Users\SAMET\.m2\repository\org\springframework\boot\spring-boot-starter-validation\2.2.1.RELEASE\spring-boot-starter-validation-2.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.1\jakarta.validation-api-2.0.1.jar;C:\Users\SAMET\.m2\repository\org\hibernate\validator\hibernate-validator\6.0.18.Final\hibernate-validator-6.0.18.Final.jar;C:\Users\SAMET\.m2\repository\org\springframework\spring-web\5.2.1.RELEASE\spring-web-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\spring-webmvc\5.2.1.RELEASE\spring-webmvc-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\spring-expression\5.2.1.RELEASE\spring-expression-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\com\h2database\h2\1.4.200\h2-1.4.200.jar;C:\Users\SAMET\.m2\repository\org\projectlombok\lombok\1.18.10\lombok-1.18.10.jar;C:\Users\SAMET\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;C:\Users\SAMET\.m2\repository\org\springframework\spring-core\5.2.1.RELEASE\spring-core-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\spring-jcl\5.2.1.RELEASE\spring-jcl-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\boot\spring-boot-starter-security\2.2.1.RELEASE\spring-boot-starter-security-2.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\spring-aop\5.2.1.RELEASE\spring-aop-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\security\spring-security-config\5.2.1.RELEASE\spring-security-config-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\security\spring-security-core\5.2.1.RELEASE\spring-security-core-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\org\springframework\security\spring-security-web\5.2.1.RELEASE\spring-security-web-5.2.1.RELEASE.jar;C:\Users\SAMET\.m2\repository\io\jsonwebtoken\jjwt\0.9.1\jjwt-0.9.1.jar;C:\Users\SAMET\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.0\jackson-databind-2.10.0.jar;C:\Users\SAMET\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.0\jackson-annotations-2.10.0.jar;C:\Users\SAMET\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.0\jackson-core-2.10.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 266537152                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4264594432                                {product} {ergonomic}
+   size_t MinHeapSize                              = 6815736                                   {product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_202
+PATH=F:/sts-4.21.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.1.v20231028-0937/jre/bin/server;F:/sts-4.21.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.1.v20231028-0937/jre/bin;C:\Python311\Scripts\;C:\Python311\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\SAMET\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\dotnet\;C:\Program Files\SafeNet\Authentication\SAC\x64;C:\Program Files\SafeNet\Authentication\SAC\x32;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Users\SAMET\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\Common Files\DivX Shared\DesktopService;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\SAMET\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\SAMET\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\SAMET\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\SAMET\AppData\Local\GitHubDesktop\bin;C:\Users\SAMET\AppData\Roaming\npm;C:\Users\SAMET\AppData\Local\JpegminiPro4\;F:\sts-4.21.0.RELEASE;
+USERNAME=SAMET
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+TMP=C:\Users\SAMET\AppData\Local\Temp
+TEMP=C:\Users\SAMET\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+OS uptime: 11 days 19:07 hours
+
+CPU: total 8 (initial active 8) 
+Processor Information for all 8 processors :
+  Max Mhz: 2601, Current Mhz: 2601, Mhz Limit: 2601
+
+Memory: 4k page, system-wide physical 16268M (5318M free)
+TotalPageFile size 18700M (AvailPageFile size 5123M)
+current process WorkingSet (physical memory assigned to process): 8M, peak: 8M
+current process commit charge ("private bytes"): 3M, peak: 3M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (21.0.1+12-LTS-29) for windows-amd64 JRE (21.0.1+12-LTS-29), built on 2023-10-05T13:27:09Z by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.
